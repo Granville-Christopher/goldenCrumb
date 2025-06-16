@@ -1,0 +1,124 @@
+/* Specific styles for card hover effects */
+.menu-item-card {
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+.menu-item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.menu-item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Slightly darker overlay for text contrast */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 0.5rem; /* Match card border-radius */
+}
+.menu-item-card:hover .menu-item-overlay {
+  opacity: 1;
+}
+
+/* Category Card specific styling */
+.category-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 9999px;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  margin: 0 auto; /* Center individual category cards */
+  transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+  border: 3px solid transparent; /* Default border */
+}
+.category-card:hover {
+  transform: scale(1.05);
+}
+.category-card.active-category {
+  border-color: var(--color-gold-accent); /* Highlight active category */
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.6); /* Gold glow */
+}
+.category-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 1; /* Always visible for category names */
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 9999px; /* rounded-full */
+}
+.category-card:hover .category-overlay {
+  background-color: rgba(0, 0, 0, 0.75); /* Darker on hover */
+}
+
+/* Custom scrollbar for a classic look (optional, but nice touch) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-primary-cream);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-dark-brown);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8b4513; /* Slightly lighter brown on hover */
+}
+
+/* Glow text effect for menu items */
+.glow-text {
+  text-shadow: 0 0 0px rgba(255, 223, 150, 0.8),
+    0 0 10px rgba(255, 223, 150, 0.6);
+  position: relative;
+  margin: 0px 30px 20px 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .category-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 9999px;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    margin: 0 auto; /* Center individual category cards */
+    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+    border: 3px solid transparent; /* Default border */
+  }
+
+  .category-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 1; /* Always visible for category names */
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 9999px; /* rounded-full */
+  }
+}

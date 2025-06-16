@@ -4,7 +4,7 @@ document.getElementById("current-year").textContent = new Date().getFullYear();
 // Smooth scrolling for navigation links
 document.querySelectorAll("nav a").forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
-    e.preventDefault();
+    // e.preventDefault();
     document.querySelector(this.getAttribute("href")).scrollIntoView({
       behavior: "smooth",
     });
@@ -102,27 +102,6 @@ window.addEventListener("scroll", () => {
 
 //
 
-// window.addEventListener("scroll", () => {
-//   const mobileNav = document.getElementById("headersec");
-
-//   if (!mobileNav) return;
-
-//   const scrolledPast = window.scrollY > window.innerHeight * 0.9;
-
-//   if (scrolledPast) {
-//     mobileNav.classList.add("bg-[#5c4033]");
-//     mobileNav.classList.add("px-5");
-//     mobileNav.classList.add("py-2");
-//     mobileNav.classList.add("px-5");
-//     mobileNav.classList.add("rounded-xl");
-//     mobileNav.classList.remove("bg-transparent");
-//   } else {
-//     mobileNav.classList.remove("bg-[#5c4033]");
-//     mobileNav.classList.add("bg-transparent");
-//   }
-// });
-
-//
 const navToggler = document.getElementById("nav-toggler");
 const mobileNav = document.getElementById("mobile-nav");
 const navOverlay = document.getElementById("nav-overlay");
