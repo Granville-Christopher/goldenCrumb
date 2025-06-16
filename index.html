@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Golden Crumb Bakery</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="tailwindcss/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+    <script src="fontawesome-free-5.15.4-web/js/all.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body class="bg-primary-cream">
+
+    <!-- Header & Navigation -->
+    <header class="bg-transparent shadow-sm py-4 md:px-32 fixed w-full z-50 rounded-b-lg">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div id="headersec">
+                <a href="#" class="text-2xl font-playfair text-gold-accent font-bold">The Golden Crumb</a>
+
+                <!-- NAV TOGGLER & OVERLAY -->
+                <div id="nav-overlay"
+                    class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300">
+                </div>
+
+                <button id="nav-toggler"
+                    class="md:hidden fixed top-5 right-10 z-50 text-2xl text-gold-accent focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#hero"
+                            class="text-primary-cream hover:text-gold-accent transition-colors duration-300">Home</a>
+                    </li>
+                    <li><a href="#menu"
+                            class="text-primary-cream hover:text-gold-accent transition-colors duration-300">Menu</a>
+                    </li>
+                    <li><a href="#why-choose-us"
+                            class="text-primary-cream hover:text-gold-accent transition-colors duration-300">About</a>
+                    </li>
+                    <li><a href="#visit-us"
+                            class="text-primary-cream hover:text-gold-accent transition-colors duration-300">Visit
+                            Us</a>
+                    </li>
+                    <li><a href="#testimonials"
+                            class="text-primary-cream hover:text-gold-accent transition-colors duration-300">Testimonials</a>
+                    </li>
+                    <li><a href="#contact"
+                            class="text-primary-cream hover:text-gold-accent transition-colors duration-300">Contact</a>
+                    </li>
+                    <li><a href="#reservation"
+                            class="reservation-link bg-dark-brown text-primary-cream px-4 py-2 rounded-full hover:text-gold-accent transition-colors duration-300">
+                            Reserve a Table
+                        </a>
+
+                    </li>
+                </ul>
+            </nav>
+
+
+
+            <nav id="mobile-nav"
+                class="fixed mobile-nav top-0 right-0 w-64 h-full bg-[#eae4dd] text-dark-brown z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-lg md:hidden">
+                <div class="flex justify-end p-4">
+                    <button id="close-nav" class="text-2xl">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <ul class="flex flex-col items-start space-y-6 px-6 text-lg font-semibold">
+                    <li><a href="#hero" class="text text-dark-brown:text-gold-accent transition">Home</a></li>
+                    <li><a href="#menu" class="hover:text-gold-accent transition">Menu</a></li>
+                    <li><a href="#why-choose-us" class="hover:text-gold-accent transition">About</a></li>
+                    <li><a href="#visit-us" class="hover:text-gold-accent transition">Visit Us</a></li>
+                    <li><a href="#testimonials" class="hover:text-gold-accent transition">Testimonials</a></li>
+                    <li><a href="#footer" class="hover:text-gold-accent transition">Contact</a></li>
+                    <li><a href="#reservation"
+                            class="reservation-link bg-dark-brown text-primary-cream px-4 py-2 rounded-full hover:text-gold-accent transition-colors duration-300">
+                            Reserve a Table
+                        </a>
+
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen flex items-center justify-center text-white overflow-hidden pt-16">
+        <!-- Background image -->
+        <img src="img/pexels-alex-cooper-358580-972838.jpg" class="absolute inset-0 w-full h-full object-cover z-0"
+            onerror="this.onerror=null;this.src='uploaded:image_767d67.png-c24db395-f995-4e64-a537-4d6b05a311fd';">
+
+        <!-- Dark Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black via-[#3b2f2f] to-black opacity-80 z-10"></div>
+
+        <!-- Content -->
+        <div class="relative z-20 text-center p-8 rounded-lg animate-on-scroll">
+            <h1
+                class="text-6xl md:text-7xl font-playfair px-16 py-8 rounded-full mb-4 leading-tight text-white glow-text relative overflow-hidden">
+                Freshly Baked, <br> Just for You!
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-white mx-4">Crafted with passion, served with love.</p>
+            <a href="#featured"
+                class="bg-yellow-400 text-brown-900 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
+                Explore Our Menu
+            </a>
+        </div>
+    </section>
+
+
+
+    <!-- Featured Products Section -->
+    <section id="featured" class="overflow-hidden py-20 md:px-32 bg-light-gray animate-on-scroll">
+        <div
+            class="absolute right-0 top-0 opacity-10 w-96 h-96 bg-[#F4A261] rounded-[60%_40%_30%_70%_/_60%_30%_20%_40%]">
+        </div>
+        <!-- <div class="w-full inset-0 h-full bg-primary-cream clip-triangle"></div> -->
+
+        <div class="w-full triang h-full ">
+            <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" class="w-full opacity-10 h-full">
+                <path d="M 0 0 L 0 300 Q 150 -150 300 0 Z" fill="#F4A261" />
+            </svg>
+        </div>
+
+        <div class="imagehanger">
+            <img class=" absolute rounded-full w-32 h-32 shadow-xl opacity-30 md:opacity-70 top-0 owen md:right-10 md:top-10"
+                src="img/pexels-vojtech-okenka-127162-1055272.jpg" alt="">
+            <img class=" absolute rounded-full w-32 h-32 shadow-xl opacity-30 right-0 mr-48 top-32"
+                src="img/pexels-solodsha-8104732.jpg" alt="">
+            <img class=" absolute rounded-full w-32 h-32 shadow-xl opacity-70 right-10 mt-40"
+                src="img/pexels-tijana-drndarski-449691-3656119.jpg" alt="">
+        </div>
+        <div class="container mx-auto px-4 text-center">
+
+            <h2 class="text-2xl md:text-3xl font-playfair text-dark-brown mb-6">Our Featured Delights</h2>
+            <p class="text-sm md:text-lg text-gray-700 my-3">Taste delights you're sure to fall in love with.</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center justify-center">
+                <!-- Left: Large Image Section -->
+                <div
+                    class="relative w-full aspect-video md:aspect-auto h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-xl animate-on-scroll">
+                    <img src="img/pexels-ozrenildo-1291712.jpg" alt="Assorted Pastries"
+                        class="w-full h-full object-cover"
+                        onerror="this.onerror=null;this.src='uploaded:image_767d67.png-c24db395-f995-4e64-a537-4d6b05a311fd';">
+                </div>
+
+                <!-- Right: Morning Special Section -->
+                <div class="flex flex-col md:flex-row lg:flex-col gap-10 items-center justify-center animate-on-scroll"
+                    style="transition-delay: 0.1s;">
+                    <!-- Top Right: Morning Special Text and Image -->
+                    <div
+                        class="flex flex-col md:flex-row items-start gap-6 bg-light-gray p-6 rounded-lg shadow-xl w-full">
+                        <img src="img/pexels-lulizler-3256807.jpg" alt="Morning Special Cupcakes"
+                            class="w-36 h-36 object-cover rounded-lg flex-shrink-0"
+                            onerror="this.onerror=null;this.src='https://placehold.co/144x144/D4AF37/5C4033?text=Special';">
+                        <div class="text-left flex-grow">
+                            <h3 class="text-2xl md:text-3xl font-playfair text-dark-brown mb-2">Morning Special</h3>
+                            <p class="text-gray-700 text-sm mb-2">
+                                Start your day right with our freshly baked croissants and a complimentary cup of
+                                coffee.
+                            </p>
+                            <p class="text-gray-700 text-sm">
+                                Available every weekday until 11 AM. Limited stock daily!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Right: "Why Choose Us" style content - adjusted for Morning Special secondary info -->
+                    <div
+                        class="flex flex-col md:flex-row items-start gap-6 bg-light-gray p-6 rounded-lg shadow-xl w-full">
+                        <img src="img/pexels-oktay-koseoglu-42034955-30624522.jpg" alt="Featured Offer Icon"
+                            class="w-36 h-36 object-cover rounded-lg flex-shrink-0"
+                            onerror="this.onerror=null;this.src='https://placehold.co/144x144/D4AF37/5C4033?text=Offer';"">
+                        <div class=" text-left flex-grow">
+                        <h3 class="text-2xl md:text-3xl font-playfair text-dark-brown mb-2">Exclusive Pastries</h3>
+                        <p class="text-gray-700 text-sm mb-2">
+                            Discover our limited-time exclusive pastry collection, crafted with unique seasonal
+                            ingredients.
+                        </p>
+                        <button
+                            class="bg-dark-brown text-white py-2 px-6 rounded-full hover:bg-gold-accent hover:text-dark-brown transition-all duration-300 shadow-md mt-4">Order
+                            Now Today
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section id="menu" class="overflow-hidden py-20 bg-light-gray relative">
+        <div class="container mx-auto px-4 md:px-32 text-center animate-on-scroll">
+            <h2 class="text-2xl md:text-3xl font-playfair text-dark-brown mb-4">Our Menu & Reservations</h2>
+            <p class="text-lg text-gray-700 mb-12">Savor our delightful creations or reserve your spot for a sweet
+                escape.</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
+                <!-- Left & Center: Menu Grid -->
+                <div class="lg:col-span-2">
+                    <h3 class="text-xl md:text-2xl font-playfair text-dark-brown mb-8 text-left">Explore Our Bakery
+                        Delights</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                        <!-- Menu Item 1 -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden product-card animate-on-scroll">
+                            <div class="relative">
+                                <img src="img/pexels-pixabay-266706.jpg" alt="Delicious Croissants"
+                                    class="w-full h-48 object-cover">
+                                <div class="product-card-overlay rounded-lg">
+                                    <a href="#"
+                                        class="bg-gold-accent text-dark-brown font-bold py-2 px-6 rounded-full hover:bg-opacity-90 transition-colors duration-300 transform hover:scale-105">Order
+                                        Now</a>
+                                </div>
+                            </div>
+                            <div class="p-4 text-left">
+                                <h4 class="text-sm md:text-xl font-playfair text-dark-brown">Artisan Croissant</h4>
+                                <p class="text-gray-600 text-xs md:text-sm">Flaky, buttery, perfect for breakfast.</p>
+                                <p class="text-dark-brown font-bold mt-2">$3.50</p>
+                            </div>
+                        </div>
+                        <!-- Menu Item 2 -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden product-card animate-on-scroll"
+                            style="transition-delay: 0.1s;">
+                            <div class="relative">
+                                <img src="img/pexels-ozrenildo-1291712.jpg" alt="Apple Pie"
+                                    class="w-full h-48 object-cover">
+                                <div class="product-card-overlay rounded-lg">
+                                    <a href="#"
+                                        class="bg-gold-accent text-dark-brown font-bold py-2 px-6 rounded-full hover:bg-opacity-90 transition-colors duration-300 transform hover:scale-105">Order
+                                        Now</a>
+                                </div>
+                            </div>
+                            <div class="p-4 text-left">
+                                <h4 class="text-sm md:text-xl font-playfair text-dark-brown">Classic Apple Pie</h4>
+                                <p class="text-gray-600 text-xs md:text-sm">Sweet apples in a golden crust.</p>
+                                <p class="text-dark-brown font-bold mt-2">$4.75 / slice</p>
+                            </div>
+                        </div>
+                        <!-- Menu Item 3 -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden product-card animate-on-scroll"
+                            style="transition-delay: 0.2s;">
+                            <div class="relative">
+                                <img src="img/pexels-pixabay-267308.jpg" alt="Fresh Baked Bread"
+                                    class="w-full h-48 object-cover">
+                                <div class="product-card-overlay rounded-lg">
+                                    <a href="#"
+                                        class="bg-gold-accent text-dark-brown font-bold py-2 px-6 rounded-full hover:bg-opacity-90 transition-colors duration-300 transform hover:scale-105">Order
+                                        Now</a>
+                                </div>
+                            </div>
+                            <div class="p-4 text-left">
+                                <h4 class="text-sm md:text-xl font-playfair text-dark-brown">Sourdough Loaf</h4>
+                                <p class="text-gray-600 text-xs md:text-sm">Crusty exterior, soft interior.</p>
+                                <p class="text-dark-brown font-bold mt-2">$6.00</p>
+                            </div>
+                        </div>
+                        <!-- Menu Item 4 -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden product-card animate-on-scroll"
+                            style="transition-delay: 0.3s;">
+                            <div class="relative">
+                                <img src="img/pexels-vojtech-okenka-127162-1055271.jpg" alt="Assorted Cookies"
+                                    class="w-full h-48 object-cover">
+                                <div class="product-card-overlay rounded-lg">
+                                    <a href="#"
+                                        class="bg-gold-accent text-dark-brown font-bold py-2 px-6 rounded-full hover:bg-opacity-90 transition-colors duration-300 transform hover:scale-105">Order
+                                        Now</a>
+                                </div>
+                            </div>
+                            <div class="p-4 text-left">
+                                <h4 class="text-sm md:text-xl font-playfair text-dark-brown">Assorted Cookie Box</h4>
+                                <p class="text-gray-600 text-xs md:text-sm">Variety of our freshly baked cookies.</p>
+                                <p class="text-dark-brown font-bold mt-2">$12.00</p>
+                            </div>
+                        </div>
+                        <!-- Menu Item 5 -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden product-card animate-on-scroll"
+                            style="transition-delay: 0.4s;">
+                            <div class="relative">
+                                <img src="img/pexels-solodsha-8104732.jpg" alt="Cinnamon Rolls"
+                                    class="w-full h-48 object-cover">
+                                <div class="product-card-overlay rounded-lg">
+                                    <a href="#"
+                                        class="bg-gold-accent text-dark-brown font-bold py-2 px-6 rounded-full hover:bg-opacity-90 transition-colors duration-300 transform hover:scale-105">Order
+                                        Now</a>
+                                </div>
+                            </div>
+                            <div class="p-4 text-left">
+                                <h4 class="text-sm md:text-xl font-playfair text-dark-brown">Cinnamon Swirl</h4>
+                                <p class="text-gray-600 text-xs md:text-sm">Warm and gooey cinnamon rolls.</p>
+                                <p class="text-dark-brown font-bold mt-2">$4.00</p>
+                            </div>
+                        </div>
+                        <!-- Menu Item 6 -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden product-card animate-on-scroll"
+                            style="transition-delay: 0.5s;">
+                            <div class="relative">
+                                <img src="img/pexels-ozrenildo-1291712.jpg" alt="Chocolate Macarons"
+                                    class="w-full h-48 object-cover">
+                                <div class="product-card-overlay rounded-lg">
+                                    <a href="#"
+                                        class="bg-gold-accent text-dark-brown font-bold py-2 px-6 rounded-full hover:bg-opacity-90 transition-colors duration-300 transform hover:scale-105">Order
+                                        Now</a>
+                                </div>
+                            </div>
+                            <div class="p-4 text-left">
+                                <h4 class="text-sm md:text-xl font-playfair text-dark-brown">Chocolate Macarons</h4>
+                                <p class="text-gray-600 text-xs md:text-sm">Delicate and rich chocolatey delight.</p>
+                                <p class="text-dark-brown font-bold mt-2">$2.50 / each</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Reserve a Table Form -->
+                <div class="lg:col-span-1 bg-white p-8 rounded-lg shadow-xl animate-on-scroll"
+                    style="transition-delay: 0.6s;">
+                    <h3 class="text-2xl md:text-3xl font-playfair text-dark-brown mb-6 text-center">Reserve a Table</h3>
+                    <form id="reservation-form">
+                        <div class="mb-4">
+                            <label for="res-name" class="block text-gray-700 text-sm font-bold mb-2">Your Name:</label>
+                            <input type="text" id="res-name" name="name"
+                                class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gold-accent focus:border-transparent"
+                                placeholder="Full Name" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="res-email" class="block text-gray-700 text-sm font-bold mb-2">Your
+                                Email:</label>
+                            <input type="email" id="res-email" name="email"
+                                class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gold-accent focus:border-transparent"
+                                placeholder="your@email.com" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="res-date" class="block text-gray-700 text-sm font-bold mb-2">Date:</label>
+                            <input type="date" id="res-date" name="date"
+                                class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gold-accent focus:border-transparent"
+                                required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="res-time" class="block text-gray-700 text-sm font-bold mb-2">Time:</label>
+                            <input type="time" id="res-time" name="time"
+                                class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gold-accent focus:border-transparent"
+                                required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="res-guests" class="block text-gray-700 text-sm font-bold mb-2">Number of
+                                Guests:</label>
+                            <input type="number" id="res-guests" name="guests" min="1" max="10" value="2"
+                                class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gold-accent focus:border-transparent"
+                                required>
+                        </div>
+                        <button type="submit"
+                            class="bg-dark-brown text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gold-accent hover:text-dark-brown transition-all duration-300 transform hover:scale-105 w-full">
+                            Book Your Table
+                        </button>
+                        <div id="reservation-status" class="mt-4 text-center text-sm"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Why Choose Us Section -->
+    <section id="why-choose-us" class="py-20 md:mx-32 bg-primary-cream animate-on-scroll">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-playfair text-dark-brown mb-12">Why Choose The Golden Crumb?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 items-center">
+                <div class="p-6 bg-white rounded-lg shadow-md animate-on-scroll">
+                    <img src="img/pexels-polina-tankilevitch-5848182.jpg" alt="Fresh Ingredients Icon"
+                        class="mx-auto mb-4 w-20 h-20 rounded-full object-cover"
+                        onerror="this.onerror=null;this.src='uploaded:pexels-lulizler-3256807.jpg-2f58f569-655a-438d-a05b-78cd270fb0b2';">
+                    <h3 class="text-xl font-playfair text-dark-brown mb-2">Finest Ingredients</h3>
+                    <p class="text-gray-700 text-sm">We source only the freshest, highest quality ingredients for
+                        unparalleled taste.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md animate-on-scroll" style="transition-delay: 0.1s;">
+                    <img src="img/pexels-ron-lach-8441264.jpg" alt="Hand Crafted Icon"
+                        class="mx-auto mb-4 w-20 h-20 rounded-full object-cover"
+                        onerror="this.onerror=null;this.src='uploaded:pexels-oktay-koseoglu-42034955-30624522.jpg-9a8d26b2-1712-4aa5-bd30-362fc5942577';">
+                    <h3 class="text-xl font-playfair text-dark-brown mb-2">Hand-Crafted with Love</h3>
+                    <p class="text-gray-700 text-sm">Every item is lovingly prepared by our skilled bakers with
+                        traditional methods.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md animate-on-scroll" style="transition-delay: 0.2s;">
+                    <img src="img/pexels-vojtech-okenka-127162-1055271.jpg" alt="Local Community Icon"
+                        class="mx-auto mb-4 w-20 h-20 rounded-full object-cover"
+                        onerror="this.onerror=null;this.src='uploaded:pexels-pixabay-266706.jpg-85ff779d-ea8c-4bbd-8c7d-3066348c8586';">
+                    <h3 class="text-xl font-playfair text-dark-brown mb-2">Community Focused</h3>
+                    <p class="text-gray-700 text-sm">Proudly serving our local community with fresh, delicious baked
+                        goods.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visit Us Today Section -->
+    <div class="relative  animate-on-scroll ">
+        <!-- Curved top SVG -->
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-none z-0">
+            <svg class="w-full h-20" viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none">
+                <path d="M0,100 C360,0 1080,0 1440,100 L1440,0 L0,0 Z" fill="#eae4dd" />
+            </svg>
+        </div>
+
+        <!-- Section content -->
+        <section id="visit-us" class="py-20 bg-dark-brown text-white md:px-32  ">
+            <div class="container px-4 text-center ">
+                <h2 class="text-2xl md:text-3xl font-playfair text-gold-accent mb-8">Visit Us Today!</h2>
+                <p class="text-sm md:text-lg mb-8 max-w-2xl mx-auto">Experience the delightful aroma and taste of
+                    freshly baked goods right from our oven. We look forward to welcoming you!</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                    <div class="text-left animate-on-scroll">
+                        <h3 class="text-2xl md:text-3xl font-playfair text-white mb-4">Our Location</h3>
+                        <p class="text-sm md:text-lg mb-2">123 Bakery Lane,</p>
+                        <p class="text-sm md:text-lg mb-2">Sweet Town, Lagos, Nigeria</p>
+                        <p class="text-sm md:text-lg mb-4">Phone: +234 801 234 5678</p>
+                        <p class="text-sm md:text-lg mb-4">Email: info@thegoldencrumb.com</p>
+                        <h3 class="text-2xl md:text-3xl font-playfair text-white mb-4">Opening Hours</h3>
+                        <p class="text-sm md:text-lg">Mon - Fri: 8:00 AM - 6:00 PM</p>
+                        <p class="text-sm md:text-lg">Sat: 9:00 AM - 4:00 PM</p>
+                        <p class="text-sm md:text-lg">Sun: Closed</p>
+                    </div>
+                    <div class="animate-on-scroll">
+                        <!-- Google Maps Embed (Placeholder for now) -->
+                        <div class="w-full h-80 bg-gray-300 rounded-lg shadow-lg flex items-center justify-center">
+                            <img src="https://placehold.co/600x400/8B4513/FFFFFF?text=Map+Placeholder"
+                                alt="Map of Bakery Location" class="w-full h-full object-cover rounded-lg"
+                                onerror="this.onerror=null;this.src='uploaded:pexels-pixabay-267308.jpg-64f97f56-7ded-47d5-a261-f18342a673d0';">
+                        </div>
+                    </div>
+                </div>
+                <a href="https://maps.google.com/?q=123+Bakery+Lane,+Sweet+Town,+Lagos,+Nigeria" target="_blank"
+                    class="mt-12 inline-block bg-gold-accent text-dark-brown font-bold py-3 px-8 rounded-full shadow-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
+                    Get Directions
+                </a>
+            </div>
+        </section>
+    </div>
+
+
+
+    <!-- Testimonials Section -->
+    <div class="relative animate-on-scroll ">
+        <!-- Curved top SVG -->
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-none z-0">
+            <svg class="w-full h-20" viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none">
+                <path d="M0,100 C360,0 1080,0 1440,100 L1440,0 L0,0 Z" fill="#5c4033" />
+            </svg>
+        </div>
+        <section id="testimonials" class="py-20 bg-light-gray md:px-32">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-xl md:text-3xl font-playfair text-dark-brown mb-12">What Our Customers Say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Testimonial Card 1 -->
+                    <div class="bg-white rounded-lg shadow-xl p-8 testimonial-card animate-on-scroll">
+                        <p class="text-gray-700 text-sm md:text-lg mb-4 italic">"The best bread I've ever tasted! Fresh,
+                            crusty, and perfect every time. A true gem!"</p>
+                        <p class="font-semibold text-dark-brown">- Jane Doe</p>
+                        <p class="text-sm text-gray-500">Local Food Critic</p>
+                    </div>
+                    <!-- Testimonial Card 2 -->
+                    <div class="bg-white rounded-lg shadow-xl p-8 testimonial-card animate-on-scroll"
+                        style="transition-delay: 0.1s;">
+                        <p class="text-gray-700 text-sm md:text-lg mb-4 italic">"Their custom cakes are out of this
+                            world! They made my daughter's birthday truly special."</p>
+                        <p class="font-semibold text-dark-brown">- John Smith</p>
+                        <p class="text-sm text-gray-500">Happy Customer</p>
+                    </div>
+                    <!-- Testimonial Card 3 -->
+                    <div class="bg-white rounded-lg shadow-xl p-8 testimonial-card animate-on-scroll"
+                        style="transition-delay: 0.2s;">
+                        <p class="text-gray-700 text-sm md:text-lg mb-4 italic">"I can't start my day without their
+                            coffee and a fresh pastry. Always a welcoming smile!"</p>
+                        <p class="font-semibold text-dark-brown">- Emily White</p>
+                        <p class="text-sm text-gray-500">Morning Regular</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial Submission Form -->
+                <div class="mt-20 bg-white rounded-lg shadow-xl p-10 max-w-3xl mx-auto animate-on-scroll">
+                    <h3 class="text-xl md:text-3xl font-playfair text-dark-brown mb-6">Share Your Experience</h3>
+                    <form id="testimonial-form">
+                        <div class="mb-4 text-left">
+                            <label for="testimonial-name" class="block text-gray-700 text-sm font-bold mb-2">Your
+                                Name:</label>
+                            <input type="text" id="testimonial-name" name="name"
+                                class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gold-accent focus:border-transparent"
+                                placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-4 text-left">
+                            <label for="testimonial-email" class="block text-gray-700 text-sm font-bold mb-2">Your Email
+                                (Optional):</label>
+                            <input type="email" id="testimonial-email" name="email"
+                                class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gold-accent focus:border-transparent"
+                                placeholder="your@email.com">
+                        </div>
+                        <div class="mb-6 text-left">
+                            <label for="testimonial-message" class="block text-gray-700 text-sm font-bold mb-2">Your
+                                Testimonial:</label>
+                            <textarea id="testimonial-message" name="message" rows="6"
+                                class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gold-accent focus:border-transparent"
+                                placeholder="Tell us about your experience..." required></textarea>
+                        </div>
+                        <button type="submit"
+                            class="bg-dark-brown text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gold-accent hover:text-dark-brown transition-all duration-300 transform hover:scale-105">
+                            Submit Testimonial
+                        </button>
+                        <div id="testimonial-status" class="mt-4 text-center text-sm"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- Footer with Contact Form -->
+    <div class="relative aanimate-on-scroll">
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-none z-0">
+            <svg class="w-full h-20" viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none">
+                <path d="M0,0 L0,20 Q720,100 1440,20 L1440,0 Z" fill="#f5f5f5" />
+            </svg>
+        </div>
+
+        <footer id="footer" class="bg-dark-brown text-white py-20 md:px-32">
+            <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- About Section -->
+                <div class="animate-on-scroll">
+                    <h3 class=" text-xl md:text-2xl font-playfair text-gold-accent mb-4">The Golden Crumb</h3>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Baking with love and tradition since [Year Established]. We are dedicated to bringing you the
+                        finest
+                        and freshest baked goods for every occasion.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-gold-accent transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.776-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33V22C18.343 21.128 22 16.991 22 12z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-gold-accent transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M12.315 2.404A1.166 1.166 0 0114.174 3h0c.49.19.98.547 1.458.943l1.868 1.458.077.062c.49.19.832.617.943 1.095.19.49.19 1.026.062 1.458l-.943 1.868-.062.077c-.19.49-.617.832-1.095.943-.49.19-1.026.19-1.458.062l-1.868-.943-.077-.062a1.166 1.166 0 01-1.095-.943c-.19-.49-.19-1.026-.062-1.458l.943-1.868.062-.077c.19-.49.617-.832 1.095-.943.49-.19 1.026-.19 1.458-.062zM7.18 10.607c-.49-.19-1.026-.19-1.458-.062l-1.868.943-.077.062c-.49.19-.832.617-.943 1.095-.19.49-.19 1.026-.062 1.458l.943 1.868.062.077c.19.49.617.832 1.095.943.49.19 1.026.19 1.458-.062l1.868-.943.077-.062c.49-.19.832-.617.943-1.095.19-.49.19-1.026-.062-1.458l-.943-1.868-.062-.077a1.166 1.166 0 01-1.095-.943zM16.82 10.607c-.49-.19-1.026-.19-1.458-.062l-1.868.943-.077.062c-.49.19-.832.617-.943 1.095-.19.49-.19 1.026-.062 1.458l.943 1.868.062.077c.19.49.617.832 1.095.943.49.19 1.026.19 1.458-.062l1.868-.943.077-.062c.49-.19.832-.617.943-1.095.19-.49.19-1.026-.062-1.458l-.943-1.868-.062-.077a1.166 1.166 0 01-1.095-.943zM12 21a9 9 0 100-18 9 9 0 000 18z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-gold-accent transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M12.267 2.47a.75.75 0 01.733-.742 60.108 60.108 0 015.69 0 .75.75 0 01.733.742 5.008 5.008 0 010 10.016.75.75 0 01-.733.742 60.108 60.108 0 01-5.69 0 .75.75 0 01-.733-.742A5.008 5.008 0 0112.267 2.47zm-1.812 3.65a.75.75 0 01-.733-.742 60.108 60.108 0 015.69 0 .75.75 0 01.733.742 5.008 5.008 0 010 10.016.75.75 0 01-.733.742 60.108 60.108 0 01-5.69 0 .75.75 0 01-.733-.742A5.008 5.008 0 0110.455 6.12z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="animate-on-scroll" style="transition-delay: 0.1s;">
+                    <h3 class="text-xl md:text-2xl font-playfair text-gold-accent mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#hero" class="hover:text-gold-accent transition-colors duration-300">Home</a></li>
+                        <li><a href="#featured" class="hover:text-gold-accent transition-colors duration-300">Menu</a>
+                        </li>
+                        <li><a href="#why-choose-us" class="hover:text-gold-accent transition-colors duration-300">About
+                                Us</a></li>
+                        <li><a href="#testimonials"
+                                class="hover:text-gold-accent transition-colors duration-300">Testimonials</a></li>
+                        <li><a href="#visit-us" class="hover:text-gold-accent transition-colors duration-300">Visit
+                                Us</a>
+                        </li>
+                        <li><a href="#" class="hover:text-gold-accent transition-colors duration-300">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="animate-on-scroll" id="contact" style="transition-delay: 0.2s;">
+                    <h3 class="text-xl md:text-2xl font-playfair text-gold-accent mb-4">Send Us a Message</h3>
+                    <form id="contact-form">
+                        <div class="mb-4">
+                            <input type="text" id="contact-name" name="name"
+                                class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gold-accent focus:border-transparent"
+                                placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-4">
+                            <input type="email" id="contact-email" name="email"
+                                class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gold-accent focus:border-transparent"
+                                placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-6">
+                            <textarea id="contact-message" name="message" rows="4"
+                                class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gold-accent focus:border-transparent"
+                                placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit"
+                            class="bg-gold-accent text-dark-brown font-bold py-3 px-8 rounded-full shadow-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 w-full">
+                            Send Message
+                        </button>
+                        <div id="contact-status" class="mt-4 text-center text-sm"></div>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-10 pt-8 text-center text-gray-400 text-sm">
+                &copy; <span id="current-year"></span> The Golden Crumb Bakery. All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="js/animate.js"></script>
+</body>
+
+</html>
