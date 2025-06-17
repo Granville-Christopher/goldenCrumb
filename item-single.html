@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Golden Crumb - Delicious Pastry</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="tailwindcss/item-single.css">
+    <link rel="stylesheet" href="tailwindcss/style.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+    <script src="fontawesome-free-5.15.4-web/js/all.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-primary-cream">
+
+    <!-- Header & Navigation -->
+    <header class="bg-transparent shadow-sm py-4 md:px-32 fixed w-full z-50 rounded-b-lg">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div id="headersec">
+                <a href="#" class="text-lg md:text-2xl font-playfair text-gold-accent font-bold">The Golden Crumb</a>
+
+                <!-- NAV TOGGLER & OVERLAY -->
+                <div id="nav-overlay"
+                    class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300">
+                </div>
+
+                <button id="nav-toggler"
+                    class="md:hidden fixed top-5 right-10 z-50 text-lg md:text-2xl text-gold-accent focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html"
+                            class="text-primary-cream hover:text-gold-accent transition-colors">Home</a>
+                    </li>
+                    <li><a href="menu.html" class="text-primary-cream hover:text-gold-accent transition-colors">Menu</a>
+                    </li>
+                    <li><a href="#why-choose-us"
+                            class="text-primary-cream hover:text-gold-accent transition-colors duration-300">About</a>
+                    </li>
+                    <li><a href="#visit-us"
+                            class="text-primary-cream hover:text-gold-accent transition-colors duration-300">Visit
+                            Us</a>
+                    </li>
+                    <li><a href="#testimonials"
+                            class="text-primary-cream hover:text-gold-accent transition-colors duration-300">Testimonials</a>
+                    </li>
+                    <li><a href="#contact"
+                            class="text-primary-cream hover:text-gold-accent transition-colors duration-300">Contact</a>
+                    </li>
+                    <li><a href="#reservation"
+                            class="reservation-link bg-dark-brown text-primary-cream px-4 py-2 rounded-full hover:text-gold-accent transition-colors duration-300">
+                            Reserve a Table
+                        </a>
+
+                    </li>
+                </ul>
+            </nav>
+
+
+
+            <nav id="mobile-nav"
+                class="fixed mobile-nav top-0 right-0 w-64 h-full bg-[#eae4dd] text-dark-brown z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-lg md:hidden">
+                <div class="flex justify-end p-4">
+                    <button id="close-nav" class="text-2xl">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <ul class="flex flex-col items-start space-y-6 px-6 text-lg font-semibold">
+                    <li><a href="index.html" class="text text-dark-brown:text-gold-accent transition">Home</a></li>
+                    <li><a href="menu.html" class="hover:text-gold-accent transition">Menu</a></li>
+                    <li><a href="#why-choose-us" class="hover:text-gold-accent transition">About</a></li>
+                    <li><a href="#visit-us" class="hover:text-gold-accent transition">Visit Us</a></li>
+                    <li><a href="#testimonials" class="hover:text-gold-accent transition">Testimonials</a></li>
+                    <li><a href="#footer" class="hover:text-gold-accent transition">Contact</a></li>
+                    <li><a href="#reservation"
+                            class="reservation-link bg-dark-brown text-primary-cream px-4 py-2 rounded-full hover:text-gold-accent transition-colors duration-300">
+                            Reserve a Table
+                        </a>
+
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Product Detail Section -->
+    <section
+        class="md:py-20 py-4 md:px-32 md:pt-32 pt-16 container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 animate-on-scroll">
+        <!-- Image Gallery Column -->
+        <div class="flex flex-col items-center">
+            <div class="w-80 aspect-square bg-light-gray rounded-lg shadow-lg overflow-hidden animate-on-scroll">
+                <img id="main-product-image" src="img/pexels-775361647-18954033.jpg"
+                    alt="Main Product Image - Delicious Pastry" class="w-full h-full object-cover">
+            </div>
+            <div class="flex space-x-4 mt-6 animate-on-scroll" style="transition-delay: 0.1s;">
+                <img src="img/pexels-775361647-18954033.jpg" alt="Pastry Thumbnail 1"
+                    class="thumbnail w-20 h-20 object-cover rounded-md cursor-pointer border-2 border-transparent active"
+                    data-full-src="img/pexels-775361647-18954033.jpg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/80x80/D4AF37/5C4033?text=Img1';">
+                <img src="img/pexels-ali-dashti-506667798-17043419.jpg" alt="Pastry Thumbnail 2"
+                    class="thumbnail w-20 h-20 object-cover rounded-md cursor-pointer border-2 border-transparent"
+                    data-full-src="img/pexels-ali-dashti-506667798-17043419.jpg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/80x80/D4AF37/5C4033?text=Img2';">
+                <img src="img/pexels-karolina-grabowska-5386665.jpg" alt="Pastry Thumbnail 3"
+                    class="thumbnail w-20 h-20 object-cover rounded-md cursor-pointer border-2 border-transparent"
+                    data-full-src="img/pexels-karolina-grabowska-5386665.jpg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/80x80/D4AF37/5C4033?text=Img3';">
+                <img src="img/pexels-ozrenildo-1291712.jpg" alt="Pastry Thumbnail 4"
+                    class="thumbnail w-20 h-20 object-cover rounded-md cursor-pointer border-2 border-transparent"
+                    data-full-src="img/pexels-ozrenildo-1291712.jpg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/80x80/D4AF37/5C4033?text=Img4';">
+            </div>
+        </div>
+
+        <!-- Product Details & Order Column -->
+        <div class="flex flex-col items-start lg:items-start text-left animate-on-scroll"
+            style="transition-delay: 0.2s;">
+            <h1 class="text-lg md:text-5xl font-playfair text-dark-brown mb-4">Golden Flake Croissant</h1>
+            <p class="text-gray-700  text-sm md:text-lg mb-6">
+                Our signature Golden Flake Croissant, meticulously crafted with layers of rich butter and delicate
+                dough, baked to a perfect golden crisp. Experience a sublime balance of flaky texture and airy interior,
+                a true testament to traditional French baking. Perfect for your morning coffee or an afternoon treat.
+            </p>
+            <p class="text-dark-brown text-4xl font-bold mb-8">$3.50</p>
+
+
+            <div class="flex flex-col hidden md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center space-x-4">
+                    <label for="quantity" class="text-xl font-semibold">Quantity:</label>
+                    <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden shadow-sm">
+                        <button id="decrement-btn" class="quantity-btn px-3 py-1 text-xl">-</button>
+                        <input type="number" id="quantity-input" value="1" min="1"
+                            class="quantity-input w-20 text-center focus:outline-none focus:ring-2 focus:ring-gold-accent">
+                        <button id="increment-btn" class="quantity-btn px-3 py-1 text-xl">+</button>
+                    </div>
+                </div>
+
+                <button
+                    class="bg-gold-accent text-dark-brown font-bold py-3 px-8 rounded-full shadow-lg order-btn w-full md:w-auto">
+                    Add to Cart
+                </button>
+            </div>
+            <div id="order-status" class="md:mt-4 text-sm text-center w-full"></div>
+        </div>
+    </section>
+
+    <!-- Related Items Section -->
+    <section id="related-items" class="md:py-20 py-12 md:px-32 mb-12 bg-light-gray animate-on-scroll">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-lg md:text-4xl font-playfair text-dark-brown mb-12">You Might Also Like...</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Related Item 1 (Example: another Pastry) -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden related-item-card animate-on-scroll">
+                    <a href="food-item.html?item=pain_au_choc">
+                        <img src="img/pexels-nadin-sh-78971847-18955551.jpg" alt="Pain au Chocolat"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4 text-left">
+                            <h4 class="text-sm md:text-xl font-playfair text-dark-brown">Pain au Chocolat</h4>
+                            <p class="text-gray-600 text-xs">Flaky pastry with rich chocolate.</p>
+                            <p class="text-dark-brown font-bold mt-2 text-sm md:text-base">$4.00</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Related Item 2 (Example: a Cake) -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden related-item-card animate-on-scroll"
+                    style="transition-delay: 0.1s;">
+                    <a href="food-item.html?item=berry_cake">
+                        <img src="img/pexels-polina-tankilevitch-4828275.jpg" alt="Berry Bliss Cake"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4 text-left">
+                            <h4 class="text-sm md:text-xl font-playfair text-dark-brown">Berry Bliss Cake</h4>
+                            <p class="text-gray-600 text-xs">Fresh berries and light cream.</p>
+                            <p class="text-dark-brown font-bold mt-2 text-sm md:text-base">$45.00 / whole</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Related Item 3 (Example: a Bread) -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden related-item-card animate-on-scroll"
+                    style="transition-delay: 0.2s;">
+                    <a href="food-item.html?item=sourdough_loaf">
+                        <img src="img/pexels-ali-dashti-506667798-17043419.jpg" alt="Artisan Sourdough"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4 text-left">
+                            <h4 class="text-sm md:text-xl font-playfair text-dark-brown">Artisan Sourdough</h4>
+                            <p class="text-gray-600 text-xs">Naturally leavened, perfect crust.</p>
+                            <p class="text-dark-brown font-bold mt-2 text-sm md:text-base">$6.00</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Related Item 4 (Example: a Cookie) -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden related-item-card animate-on-scroll"
+                    style="transition-delay: 0.3s;">
+                    <a href="food-item.html?item=choc_chip_cookie">
+                        <img src="img/pexels-mariana-kurnyk-844465-1775043.jpg" alt="Choc Chip Cookie"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4 text-left">
+                            <h4 class="text-sm md:text-xl font-playfair text-dark-brown">Choc Chip Cookie</h4>
+                            <p class="text-gray-600 text-xs">Classic favorite, soft and chewy.</p>
+                            <p class="text-dark-brown font-bold mt-2 text-sm md:text-base">$2.00</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- <footer class="bg-dark-brown text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-300 text-sm mb-4">
+                Questions or special requests? <a href="index.html#footer"
+                    class="text-gold-accent hover:underline">Contact Us</a>
+            </p>
+            <p class="text-gray-400 text-sm">
+                &copy; <span id="current-year-food-item"></span> The Golden Crumb Bakery. All rights reserved.
+            </p>
+        </div>
+    </footer> -->
+
+    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-light-gray p-4 shadow-lg z-50 border-t">
+        <div class="flex items-center justify-between gap-4">
+            <div class="flex items-center space-x-2">
+                <label for="quantity" class="text-sm font-medium text-gray-700">Qty:</label>
+                <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+                    <button id="decrement-btn-d" class="px-3 py-1 text-xl">-</button>
+                    <input type="number" id="quantity-input-d" value="1" min="1"
+                        class="w-12 text-center focus:outline-none">
+                    <button id="increment-btn-d" class="px-3 py-1 text-xl">+</button>
+                </div>
+            </div>
+
+            <button
+                class="bg-gold-accent text-dark-brown font-bold py-2 px-6 rounded-full shadow-md text-sm order-btn-small">
+                Add to Cart
+            </button>
+        </div>
+    </div>
+    <script src="js/item-single.js"></script>
+    <script src="js/animate.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+/* Custom Colors for Tailwind */
+:root {
+  --color-primary-cream: #eae4dd; /* Your chosen light cream background */
+  --color-dark-brown: #5c4033; /* Deep coffee brown for accents/text */
+  --color-gold-accent: #d4af37 !important; /* Gold/warm yellow for highlights */
+  --color-light-gray: #f5f5f5; /* For subtle distinctions */
+}
+
+.bg-primary-cream {
+  background-color: var(--color-primary-cream);
+}
+.text-dark-brown {
+  color: var(--color-dark-brown);
+}
+.text-primary-cream {
+  color: var(--color-primary-cream);
+}
+.bg-dark-brown {
+  background-color: var(--color-dark-brown);
+}
+.text-gold-accent {
+  color: var(--color-gold-accent) !important;
+}
+.bg-gold-accent {
+  background-color: var(--color-gold-accent);
+}
+.bg-light-gray {
+  background-color: var(--color-light-gray);
+}
+
+/* Custom Font Family */
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--color-dark-brown); /* Default text color */
+}
+h1,
+h2,
+h3,
+.font-playfair {
+  font-family: "Playfair Display", serif;
+}
+
+/* Sweet Animation Styles */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Thumbnail active state */
+.thumbnail.active {
+  border: 3px solid var(--color-gold-accent);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+/* Related item card hover effect (reusing product-card style) */
+.related-item-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+.related-item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Order button hover effect */
+.order-btn {
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+.order-btn:hover {
+  transform: scale(1.02);
+  background-color: #c09a2e; /* Slightly darker gold */
+}
+
+/* Quantity counter button styles */
+.quantity-btn {
+  @apply bg-dark-brown text-white text-xl font-bold w-10 h-10 flex items-center justify-center rounded-full hover:bg-opacity-90 transition-colors duration-200;
+}
+.quantity-input {
+  @apply w-16 text-center text-dark-brown text-xl font-semibold bg-white border border-gray-300 rounded-lg py-2 mx-2;
+  -moz-appearance: textfield; /* Firefox */
+}
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Custom scrollbar for a classic look (optional, but nice touch) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-primary-cream);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-dark-brown);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8b4513; /* Slightly lighter brown on hover */
+}
+

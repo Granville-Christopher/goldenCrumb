@@ -155,7 +155,7 @@ function filterMenuItems(category) {
 // Add event listeners to category filter buttons
 categoryFilters.forEach((button) => {
   button.addEventListener("click", function (e) {
-    e.preventDefault(); // Prevent default anchor link behavior
+    // e.preventDefault();
     const category = this.getAttribute("data-category-filter");
     filterMenuItems(category);
   });

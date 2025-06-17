@@ -41,8 +41,7 @@
                     <li><a href="index.html"
                             class="text-primary-cream hover:text-gold-accent transition-colors">Home</a>
                     </li>
-                    <li><a href="menu.html"
-                            class="text-primary-cream hover:text-gold-accent transition-colors">Menu</a>
+                    <li><a href="menu.html" class="text-primary-cream hover:text-gold-accent transition-colors">Menu</a>
                     </li>
                     <li><a href="#why-choose-us"
                             class="text-primary-cream hover:text-gold-accent transition-colors duration-300">About</a>
@@ -76,7 +75,7 @@
                     </button>
                 </div>
                 <ul class="flex flex-col items-start space-y-6 px-6 text-lg font-semibold">
-                    <li><a href="#hero" class="text text-dark-brown:text-gold-accent transition">Home</a></li>
+                    <li><a href="index.html" class="text text-dark-brown:text-gold-accent transition">Home</a></li>
                     <li><a href="menu.html" class="hover:text-gold-accent transition">Menu</a></li>
                     <li><a href="#why-choose-us" class="hover:text-gold-accent transition">About</a></li>
                     <li><a href="#visit-us" class="hover:text-gold-accent transition">Visit Us</a></li>
@@ -99,7 +98,8 @@
     <!-- Hero Section -->
     <section id="hero" class="relative h-screen flex items-center justify-center text-white overflow-hidden pt-16">
         <!-- Background image -->
-        <img src="img/pexels-alex-cooper-358580-972838.jpg" class="absolute inset-0 w-full h-full object-cover z-0"
+        <img src="img/pexels-alex-cooper-358580-972838.jpg" loading="lazy"
+            class="absolute inset-0 w-full h-full object-cover z-0"
             onerror="this.onerror=null;this.src='uploaded:image_767d67.png-c24db395-f995-4e64-a537-4d6b05a311fd';">
 
         <!-- Dark Gradient Overlay -->
@@ -112,7 +112,7 @@
                 Freshly Baked, <br> Just for You!
             </h1>
             <p class="text-xl md:text-2xl mb-8 text-white mx-4">Crafted with passion, served with love.</p>
-            <a href="#featured"
+            <a href="menu.html"
                 class="bg-yellow-400 text-brown-900 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
                 Explore Our Menu
             </a>
@@ -135,11 +135,12 @@
         </div>
 
         <div class="imagehanger">
-            <img class=" absolute rounded-full w-32 h-32 shadow-xl opacity-30 md:opacity-70 top-0 owen md:right-10 md:top-10"
+            <img loading="lazy"
+                class=" absolute rounded-full w-32 h-32 shadow-xl opacity-30 md:opacity-70 top-0 owen md:right-10 md:top-10"
                 src="img/pexels-vojtech-okenka-127162-1055272.jpg" alt="">
-            <img class=" absolute rounded-full w-32 h-32 shadow-xl opacity-30 right-0 mr-48 top-32"
+            <img loading="lazy" class=" absolute rounded-full w-32 h-32 shadow-xl opacity-30 right-0 mr-48 top-32"
                 src="img/pexels-solodsha-8104732.jpg" alt="">
-            <img class=" absolute rounded-full w-32 h-32 shadow-xl opacity-70 right-10 mt-40"
+            <img loading="lazy" class=" absolute rounded-full w-32 h-32 shadow-xl opacity-70 right-10 mt-40"
                 src="img/pexels-tijana-drndarski-449691-3656119.jpg" alt="">
         </div>
         <div class="container mx-auto px-4 text-center">
@@ -151,7 +152,7 @@
                 <!-- Left: Large Image Section -->
                 <div
                     class="relative w-full aspect-video md:aspect-auto h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-xl animate-on-scroll">
-                    <img src="img/pexels-ozrenildo-1291712.jpg" alt="Assorted Pastries"
+                    <img loading="lazy" src="img/pexels-ozrenildo-1291712.jpg" alt="Assorted Pastries"
                         class="w-full h-full object-cover"
                         onerror="this.onerror=null;this.src='uploaded:image_767d67.png-c24db395-f995-4e64-a537-4d6b05a311fd';">
                 </div>
@@ -162,7 +163,7 @@
                     <!-- Top Right: Morning Special Text and Image -->
                     <div
                         class="flex flex-col md:flex-row items-start gap-6 bg-light-gray p-6 rounded-lg shadow-xl w-full">
-                        <img src="img/pexels-lulizler-3256807.jpg" alt="Morning Special Cupcakes"
+                        <img loading="lazy" src="img/pexels-lulizler-3256807.jpg" alt="Morning Special Cupcakes"
                             class="w-36 h-36 object-cover rounded-lg flex-shrink-0"
                             onerror="this.onerror=null;this.src='https://placehold.co/144x144/D4AF37/5C4033?text=Special';">
                         <div class="text-left flex-grow">
@@ -180,8 +181,8 @@
                     <!-- Bottom Right: "Why Choose Us" style content - adjusted for Morning Special secondary info -->
                     <div
                         class="flex flex-col md:flex-row items-start gap-6 bg-light-gray p-6 rounded-lg shadow-xl w-full">
-                        <img src="img/pexels-oktay-koseoglu-42034955-30624522.jpg" alt="Featured Offer Icon"
-                            class="w-36 h-36 object-cover rounded-lg flex-shrink-0"
+                        <img loading="lazy" src="img/pexels-oktay-koseoglu-42034955-30624522.jpg"
+                            alt="Featured Offer Icon" class="w-36 h-36 object-cover rounded-lg flex-shrink-0"
                             onerror="this.onerror=null;this.src='https://placehold.co/144x144/D4AF37/5C4033?text=Offer';"">
                         <div class=" text-left flex-grow">
                         <h3 class="text-2xl md:text-3xl font-playfair text-dark-brown mb-2">Exclusive Pastries</h3>
@@ -189,10 +190,12 @@
                             Discover our limited-time exclusive pastry collection, crafted with unique seasonal
                             ingredients.
                         </p>
-                        <button
-                            class="bg-dark-brown text-white py-2 px-6 rounded-full hover:bg-gold-accent hover:text-dark-brown transition-all duration-300 shadow-md mt-4">Order
-                            Now Today
-                        </button>
+                        <a href="menu.html">
+                            <button
+                                class="bg-dark-brown text-white py-2 px-6 rounded-full hover:bg-gold-accent hover:text-dark-brown transition-all duration-300 shadow-md mt-4">
+                                Order Now Today
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -216,10 +219,10 @@
                         <!-- Menu Item 1 -->
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden product-card animate-on-scroll">
                             <div class="relative">
-                                <img src="img/pexels-pixabay-266706.jpg" alt="Delicious Croissants"
+                                <img loading="lazy" src="img/pexels-pixabay-266706.jpg" alt="Delicious Croissants"
                                     class="w-full h-48 object-cover">
                                 <div class="product-card-overlay rounded-lg">
-                                    <a href="#"
+                                    <a href="item-single.html"
                                         class="bg-gold-accent text-dark-brown font-bold py-2 px-6 rounded-full hover:bg-opacity-90 transition-colors duration-300 transform hover:scale-105">Order
                                         Now</a>
                                 </div>
@@ -234,10 +237,10 @@
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden product-card animate-on-scroll"
                             style="transition-delay: 0.1s;">
                             <div class="relative">
-                                <img src="img/pexels-ozrenildo-1291712.jpg" alt="Apple Pie"
+                                <img loading="lazy" src="img/pexels-ozrenildo-1291712.jpg" alt="Apple Pie"
                                     class="w-full h-48 object-cover">
                                 <div class="product-card-overlay rounded-lg">
-                                    <a href="#"
+                                    <a href="item-single.html"
                                         class="bg-gold-accent text-dark-brown font-bold py-2 px-6 rounded-full hover:bg-opacity-90 transition-colors duration-300 transform hover:scale-105">Order
                                         Now</a>
                                 </div>
@@ -252,10 +255,10 @@
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden product-card animate-on-scroll"
                             style="transition-delay: 0.2s;">
                             <div class="relative">
-                                <img src="img/pexels-pixabay-267308.jpg" alt="Fresh Baked Bread"
+                                <img loading="lazy" src="img/pexels-pixabay-267308.jpg" alt="Fresh Baked Bread"
                                     class="w-full h-48 object-cover">
                                 <div class="product-card-overlay rounded-lg">
-                                    <a href="#"
+                                    <a href="item-single.html"
                                         class="bg-gold-accent text-dark-brown font-bold py-2 px-6 rounded-full hover:bg-opacity-90 transition-colors duration-300 transform hover:scale-105">Order
                                         Now</a>
                                 </div>
@@ -270,10 +273,10 @@
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden product-card animate-on-scroll"
                             style="transition-delay: 0.3s;">
                             <div class="relative">
-                                <img src="img/pexels-vojtech-okenka-127162-1055271.jpg" alt="Assorted Cookies"
-                                    class="w-full h-48 object-cover">
+                                <img loading="lazy" src="img/pexels-vojtech-okenka-127162-1055271.jpg"
+                                    alt="Assorted Cookies" class="w-full h-48 object-cover">
                                 <div class="product-card-overlay rounded-lg">
-                                    <a href="#"
+                                    <a href="item-single.html"
                                         class="bg-gold-accent text-dark-brown font-bold py-2 px-6 rounded-full hover:bg-opacity-90 transition-colors duration-300 transform hover:scale-105">Order
                                         Now</a>
                                 </div>
@@ -288,10 +291,10 @@
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden product-card animate-on-scroll"
                             style="transition-delay: 0.4s;">
                             <div class="relative">
-                                <img src="img/pexels-solodsha-8104732.jpg" alt="Cinnamon Rolls"
+                                <img loading="lazy" src="img/pexels-solodsha-8104732.jpg" alt="Cinnamon Rolls"
                                     class="w-full h-48 object-cover">
                                 <div class="product-card-overlay rounded-lg">
-                                    <a href="#"
+                                    <a href="item-single.html"
                                         class="bg-gold-accent text-dark-brown font-bold py-2 px-6 rounded-full hover:bg-opacity-90 transition-colors duration-300 transform hover:scale-105">Order
                                         Now</a>
                                 </div>
@@ -306,10 +309,10 @@
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden product-card animate-on-scroll"
                             style="transition-delay: 0.5s;">
                             <div class="relative">
-                                <img src="img/pexels-ozrenildo-1291712.jpg" alt="Chocolate Macarons"
+                                <img loading="lazy" src="img/pexels-ozrenildo-1291712.jpg" alt="Chocolate Macarons"
                                     class="w-full h-48 object-cover">
                                 <div class="product-card-overlay rounded-lg">
-                                    <a href="#"
+                                    <a href="item-single.html"
                                         class="bg-gold-accent text-dark-brown font-bold py-2 px-6 rounded-full hover:bg-opacity-90 transition-colors duration-300 transform hover:scale-105">Order
                                         Now</a>
                                 </div>
@@ -369,7 +372,7 @@
                 </div>
             </div>
         </div>
-        
+
     </section>
     <!-- Why Choose Us Section -->
     <section id="why-choose-us" class="py-20 md:mx-32 bg-primary-cream animate-on-scroll">
@@ -377,7 +380,7 @@
             <h2 class="text-2xl md:text-3xl font-playfair text-dark-brown mb-12">Why Choose The Golden Crumb?</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 items-center">
                 <div class="p-6 bg-white rounded-lg shadow-md animate-on-scroll">
-                    <img src="img/pexels-polina-tankilevitch-5848182.jpg" alt="Fresh Ingredients Icon"
+                    <img loading="lazy" src="img/pexels-polina-tankilevitch-5848182.jpg" alt="Fresh Ingredients Icon"
                         class="mx-auto mb-4 w-20 h-20 rounded-full object-cover"
                         onerror="this.onerror=null;this.src='uploaded:pexels-lulizler-3256807.jpg-2f58f569-655a-438d-a05b-78cd270fb0b2';">
                     <h3 class="text-xl font-playfair text-dark-brown mb-2">Finest Ingredients</h3>
@@ -385,7 +388,7 @@
                         unparalleled taste.</p>
                 </div>
                 <div class="p-6 bg-white rounded-lg shadow-md animate-on-scroll" style="transition-delay: 0.1s;">
-                    <img src="img/pexels-ron-lach-8441264.jpg" alt="Hand Crafted Icon"
+                    <img loading="lazy" src="img/pexels-ron-lach-8441264.jpg" alt="Hand Crafted Icon"
                         class="mx-auto mb-4 w-20 h-20 rounded-full object-cover"
                         onerror="this.onerror=null;this.src='uploaded:pexels-oktay-koseoglu-42034955-30624522.jpg-9a8d26b2-1712-4aa5-bd30-362fc5942577';">
                     <h3 class="text-xl font-playfair text-dark-brown mb-2">Hand-Crafted with Love</h3>
@@ -393,7 +396,7 @@
                         traditional methods.</p>
                 </div>
                 <div class="p-6 bg-white rounded-lg shadow-md animate-on-scroll" style="transition-delay: 0.2s;">
-                    <img src="img/pexels-vojtech-okenka-127162-1055271.jpg" alt="Local Community Icon"
+                    <img loading="lazy" src="img/pexels-vojtech-okenka-127162-1055271.jpg" alt="Local Community Icon"
                         class="mx-auto mb-4 w-20 h-20 rounded-full object-cover"
                         onerror="this.onerror=null;this.src='uploaded:pexels-pixabay-266706.jpg-85ff779d-ea8c-4bbd-8c7d-3066348c8586';">
                     <h3 class="text-xl font-playfair text-dark-brown mb-2">Community Focused</h3>
@@ -574,8 +577,8 @@
                 <div class="animate-on-scroll" style="transition-delay: 0.1s;">
                     <h3 class="text-xl md:text-2xl font-playfair text-gold-accent mb-4">Quick Links</h3>
                     <ul class="space-y-2 text-gray-300">
-                        <li><a href="#hero" class="hover:text-gold-accent transition-colors duration-300">Home</a></li>
-                        <li><a href="#featured" class="hover:text-gold-accent transition-colors duration-300">Menu</a>
+                        <li><a href="index.html" class="hover:text-gold-accent transition-colors duration-300">Home</a></li>
+                        <li><a href="menu.html" class="hover:text-gold-accent transition-colors duration-300">Menu</a>
                         </li>
                         <li><a href="#why-choose-us" class="hover:text-gold-accent transition-colors duration-300">About
                                 Us</a></li>
@@ -624,6 +627,17 @@
 
 
     <script src="js/animate.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/sw.js').then(function (registration) {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function (err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
 </body>
 
 </html>
