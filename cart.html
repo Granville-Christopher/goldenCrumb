@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Golden Crumb - Your Cart</title>
+    <!-- Tailwind CSS CDN -->
+    <link rel="stylesheet" href="tailwindcss/cart.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+    <script src="fontawesome-free-5.15.4-web/js/all.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+
+    </style>
+</head>
+
+<body class="bg-primary-cream">
+
+    <!-- Header & Navigation -->
+    <header class="bg-transparent shadow-sm py-4 md:px-32 fixed w-full z-50 rounded-b-lg">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div id="headersec" class="flex justify-center items-between">
+                <a href="#" class="text-lg md:text-2xl font-playfair text-gold-accent font-bold">The Golden Crumb</a>
+
+                <!-- NAV TOGGLER & OVERLAY -->
+                <div id="nav-overlay"
+                    class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300">
+                </div>
+
+
+                <a href="cart.html" class="ml-12 cart md:hidden px-2 items-center flex rounded-lg" id="cart">
+                    <i class="fas fa-shopping-bag mr-1 text-dark-brown" id="cart-icon"></i>
+                    <p class="cart-count text-dark-brown" id="cart-count">0</p>
+                </a>
+
+                <button id="nav-toggler"
+                    class="md:hidden fixed top-5 right-10 z-50 text-lg md:text-2xl text-gold-accent focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="text-dark-brown hover:text-gold-accent transition-colors">Home</a>
+                    </li>
+                    <li><a href="menu.html" class="text-dark-brown hover:text-gold-accent transition-colors">Menu</a>
+                    </li>
+                    <li><a href="#why-choose-us"
+                            class="text-dark-brown hover:text-gold-accent transition-colors duration-300">About</a>
+                    </li>
+                    <li><a href="#visit-us"
+                            class="text-dark-brown hover:text-gold-accent transition-colors duration-300">Visit
+                            Us</a>
+                    </li>
+                    <li><a href="#testimonials"
+                            class="text-dark-brown hover:text-gold-accent transition-colors duration-300">Testimonials</a>
+                    </li>
+                    <li><a href="#contact"
+                            class="text-dark-brown hover:text-gold-accent transition-colors duration-300">Contact</a>
+                    </li>
+                    <li><a href="#reservation"
+                            class="reservation-link bg-dark-brown text-primary-cream px-4 py-2 rounded-full hover:text-gold-accent transition-colors duration-300">
+                            Reserve a Table
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="cart.html" id="cart"
+                            class="py-1 px-2 items-center justify-center rounded-full text-dark-brown hover:text-gold-accent hover:bg-gray-300 transition">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span id="cart-count">0</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+            </nav>
+
+
+
+            <nav id="mobile-nav"
+                class="fixed mobile-nav top-0 right-0 w-64 h-full bg-[#eae4dd] text-dark-brown z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-lg md:hidden">
+                <div class="flex justify-end p-4">
+                    <button id="close-nav" class="text-2xl">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <ul class="flex flex-col items-start space-y-6 px-6 text-lg font-semibold">
+                    <li><a href="index.html" class="text text-dark-brown:text-gold-accent transition">Home</a></li>
+                    <li><a href="menu.html" class="hover:text-gold-accent transition">Menu</a></li>
+                    <li><a href="#why-choose-us" class="hover:text-gold-accent transition">About</a></li>
+                    <li><a href="#visit-us" class="hover:text-gold-accent transition">Visit Us</a></li>
+                    <li><a href="#testimonials" class="hover:text-gold-accent transition">Testimonials</a></li>
+                    <li><a href="#footer" class="hover:text-gold-accent transition">Contact</a></li>
+                    <li><a href="#reservation"
+                            class="reservation-link bg-dark-brown text-primary-cream px-4 py-2 rounded-full hover:text-gold-accent transition-colors duration-300">
+                            Reserve a Table
+                        </a>
+
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Cart Page Content -->
+    <main class="md:py-20 pt-20 md:pt-24 md:mx-32 md:px-4 animate-on-scroll">
+        <h1 class="text-lg md:text-3xl font-playfair text-dark-brown mb-4 text-center">Your Shopping Cart</h1>
+
+
+        <div class=" grid grid-cols-1 md:pt-16 md:grid-cols-2 justify-center ">
+            <div id="cart-items-container" class=" rounded-lg w-full  mb-8">
+                <!-- Cart items will be dynamically loaded here by JavaScript -->
+                <div id="empty-cart-message" class="text-center text-gray-600 text-lg py-10 hidden">
+                    Your cart is currently empty. <br> <a href="menu.html"
+                        class="text-gold-accent hover:underline">Start
+                        browsing our delicious menu!</a>
+                </div>
+            </div>
+
+            <div id="cart-summary" class="bg-white w-full rounded-lg shadow-xl p-6 md:mx-4 animate-on-scroll"
+                style="transition-delay: 0.1s;">
+                <h2 class="text-lg md:text-3xl font-playfair text-dark-brown mb-6 text-center">Order Summary</h2>
+                <div class="space-y-3 text-lg">
+                    <div class="flex justify-between">
+                        <span class="text-sm md:text-base">Subtotal:</span>
+                        <span id="cart-subtotal" class="font-semibold text-xs md:text-base">$0.00</span>
+                    </div>
+                    <div class="flex justify-between border-t border-gray-200 pt-3">
+                        <span class="text-sm md:text-base">Shipping:</span>
+                        <span id="cart-shipping" class="font-semibold text-xs md:text-base">Calculated at Checkout</span>
+                    </div>
+                    <div class="flex justify-between border-t border-gray-200 pt-3">
+                        <span class="text-sm md:text-base">Tax:</span>
+                        <span id="cart-tax" class="font-semibold text-xs md:text-base">Calculated at Checkout</span>
+                    </div>
+                    <div class="flex justify-between border-t-2 border-dark-brown pt-4 text-xl font-bold">
+                        <span class="text-sm md:text-base">Grand Total:</span>
+                        <span id="cart-grand-total" class="text-gold-accent text-base">$0.00</span>
+                    </div>
+                </div>
+
+                <button id="checkout-button"
+                    class="mt-8 bg-gold-accent text-dark-brown font-bold py-4 px-10 rounded-full shadow-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 w-full">
+                    Proceed to Checkout
+                </button>
+                <button id="clear-cart-button"
+                    class="mt-4 bg-gray-300 text-dark-brown font-bold py-3 px-8 rounded-full shadow-md hover:bg-gray-400 transition-all duration-300 w-full">
+                    Clear Cart
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-brown text-white py-12 md:mt-20">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-300 text-sm mb-4">
+                Questions or special requests? <a href="index.html#footer"
+                    class="text-gold-accent hover:underline">Contact Us</a>
+            </p>
+            <p class="text-gray-400 text-sm">
+                &copy; <span id="current-year-cart"></span> The Golden Crumb Bakery. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    <!-- <script src="js/animate.js"></script> -->
+    <script src="js/cart-render.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>

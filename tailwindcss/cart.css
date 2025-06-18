@@ -1,0 +1,87 @@
+/* Custom Colors for Tailwind */
+:root {
+    --color-primary-cream: #EAE4DD; /* Your chosen light cream background */
+    --color-dark-brown: #5C4033;   /* Deep coffee brown for accents/text */
+    --color-gold-accent: #D4AF37;  /* Gold/warm yellow for highlights */
+    --color-light-gray: #F5F5F5; /* For subtle distinctions */
+}
+
+.bg-primary-cream { background-color: var(--color-primary-cream); }
+.text-primary-cream { color: var(--color-primary-cream); }
+.text-dark-brown { color: var(--color-dark-brown); }
+.bg-dark-brown { background-color: var(--color-dark-brown); }
+.text-gold-accent { color: var(--color-gold-accent); }
+.bg-gold-accent { background-color: var(--color-gold-accent); }
+.bg-light-gray { background-color: var(--color-light-gray); }
+
+/* Custom Font Family */
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-dark-brown); /* Default text color */
+}
+h1, h2, h3, h4, .font-playfair {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Sweet Animation Styles */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Quantity counter button styles */
+.quantity-btn {
+    @apply bg-dark-brown text-white text-lg font-bold w-8 h-8 flex items-center justify-center rounded-full hover:bg-opacity-90 transition-colors duration-200;
+}
+.quantity-input {
+    @apply w-12 text-center text-dark-brown text-base font-semibold bg-white border border-gray-300 rounded-lg py-1 mx-1;
+    -moz-appearance: textfield; /* Firefox */
+}
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Custom scrollbar for a classic look (optional, but nice touch) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--color-primary-cream);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-dark-brown);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #8B4513; /* Slightly lighter brown on hover */
+}
+
+/* Mobile nav specific styles */
+.mobile-nav {
+    transform: translateX(100%);
+}
+
+.mobile-nav.open {
+    transform: translateX(0);
+}
+
+/* Fix for cart items visibility */
+#cart-items-container > div {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    overflow: visible !important;
+}
+/* 
+.jvbtn{
+    width: 6000px  !important;
+} */

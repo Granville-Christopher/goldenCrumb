@@ -1,35 +1,40 @@
-window.addEventListener("scroll", () => {
+function updateNavLinkColors() {
   const header = document.querySelector("header");
-  const logo = header.querySelector("a");
+  // const logo = header.querySelector("a");
   const links = header.querySelectorAll("nav a");
   const scrolledPast = window.scrollY > window.innerHeight * 0;
+
   if (scrolledPast) {
     header.classList.add("bg-gray-100");
-    logo.classList.add("text-dark-brown");
+    // logo.classList.add("text-dark-brown");
     links.forEach((link) => {
       if (link.classList.contains("reservation-link")) return;
-      link.classList.remove("text-primary-cream");
-      link.classList.add("text-dark-brown");
+      // link.classList.remove("text-primary-cream");
+      // link.classList.add("text-dark-brown");
     });
   } else {
     header.classList.remove("bg-gray-100");
-    logo.classList.remove("text-dark-brown");
+    // logo.classList.remove("text-dark-brown");
 
     links.forEach((link) => {
+      // Remove text-dark-brown by default
+      // link.classList.remove("text-dark-brown");
+
       // Check screen width
       if (window.innerWidth < 768) {
         // For small screens
         if (link.classList.contains("reservation-link")) return;
-        link.classList.remove("text-primary-cream");
-        link.classList.add("text-dark-brown");
+        // link.classList.add("text-primary-cream");
       } else {
         // For medium and large screens
-        link.classList.add("text-primary-cream");
-        link.classList.remove("text-dark-brown");
+        // link.classList.add("text-primary-cream");
       }
     });
   }
-});
+}
+
+window.addEventListener("scroll", updateNavLinkColors);
+window.addEventListener("load", updateNavLinkColors);
 
 //
 
@@ -215,30 +220,7 @@ quantityInputSmall.addEventListener("keydown", (e) => {
 // Initialize decrement button state on page load
 updateDecrementButtonStateSmall();
 
-// Simulate Order Now/Add to Cart
-document.querySelector(".order-btn").addEventListener("click", () => {
-  const quantity = quantityInput.value;
-  const itemName = document.querySelector("h1").textContent; // Get product name from H1
-  orderStatusDiv.textContent = `Adding ${quantity} of "${itemName}" to your cart...`;
-  orderStatusDiv.className = "mt-4 text-sm text-dark-brown"; // Apply status styling
+// Remove add to cart event listeners to avoid ReferenceError and rely on cart-render.js for add to cart functionality
+// document.querySelector(".order-btn").addEventListener("click", () => { ... });
+// document.querySelector(".order-btn-small").addEventListener("click", () => { ... });
 
-  // Simulate API call or cart addition delay
-  setTimeout(() => {
-    orderStatusDiv.textContent = `${quantity} "${itemName}" added to cart successfully!`;
-    orderStatusDiv.className = "mt-4 text-sm text-green-600 font-semibold";
-  }, 1500); // Display success message after 1.5 seconds
-});
-
-// Simulate Order Now/Add to Cart small screen
-document.querySelector(".order-btn-small").addEventListener("click", () => {
-  const quantity = quantityInputSmall.value;
-  const itemName = document.querySelector("h1").textContent; // Get product name from H1
-  orderStatusDivSmall.textContent = `Adding ${quantity} of "${itemName}" to your cart...`;
-  orderStatusDivSmall.className = "mt-4 text-sm text-dark-brown"; // Apply status styling
-
-  // Simulate API call or cart addition delay
-  setTimeout(() => {
-    orderStatusDivSmall.textContent = `${quantity} "${itemName}" added to cart successfully!`;
-    orderStatusDivSmall.className = "mt-4 text-sm text-green-600 font-semibold";
-  }, 1500); // Display success message after 1.5 seconds
-});
