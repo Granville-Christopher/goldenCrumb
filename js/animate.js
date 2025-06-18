@@ -66,15 +66,34 @@ document
   });
 
 //
-
 window.addEventListener("scroll", () => {
   const header = document.querySelector("header");
   const logo = header.querySelector("a");
   const links = header.querySelectorAll("nav a");
   const scrolledPast = window.scrollY > window.innerHeight * 0.9;
+  const cartElement = document.getElementById("cart");
+  const cartCountElement = cartElement
+    ? cartElement.querySelector("#cart-count")
+    : null;
+  const cartIconElement = cartElement
+    ? cartElement.querySelector("#cart-icon")
+    : null;
+
   if (scrolledPast) {
     header.classList.add("bg-gray-100");
     logo.classList.add("text-dark-brown");
+    if (window.innerWidth < 768) {
+      if (window.innerWidth < 768) {
+        if (cartCountElement) {
+          cartCountElement.classList.remove("text-primary-cream");
+          cartCountElement.classList.add("text-dark-brown");
+        }
+        if (cartIconElement) {
+          cartIconElement.classList.remove("text-primary-cream");
+          cartIconElement.classList.add("text-dark-brown");
+        }
+      }
+    }
     links.forEach((link) => {
       if (link.classList.contains("reservation-link")) return;
       link.classList.remove("text-primary-cream");
@@ -85,21 +104,28 @@ window.addEventListener("scroll", () => {
     logo.classList.remove("text-dark-brown");
 
     links.forEach((link) => {
-      // Check screen width
+      // Check screen width for links (as you already have)
       if (window.innerWidth < 768) {
-        // For small screens
-        if (link.classList.contains("reservation-link")) return;    
+        // For small screens, keep text-dark-brown for non-reservation links
+        if (link.classList.contains("reservation-link")) return;
+        if (cartCountElement) {
+          cartCountElement.classList.remove("text-dark-brown");
+          cartCountElement.classList.add("text-primary-cream");
+        }
+        if (cartIconElement) {
+          cartIconElement.classList.remove("text-dark-brown");
+          cartIconElement.classList.add("text-primary-cream");
+        }
         link.classList.remove("text-primary-cream");
         link.classList.add("text-dark-brown");
       } else {
-        // For medium and large screens
+        // For medium and large screens, apply primary-cream
         link.classList.add("text-primary-cream");
         link.classList.remove("text-dark-brown");
       }
     });
   }
 });
-
 //
 
 const navToggler = document.getElementById("nav-toggler");
